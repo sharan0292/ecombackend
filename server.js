@@ -4,6 +4,7 @@ const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
 const productRoutes = require("./routes/productRoutes");
 const authRoutes = require("./routes/authRoutes");
+const cartRoutes = require("./routes/cartRoutes");
 
 dotenv.config();
 const app = express();
@@ -13,6 +14,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use("/auth", authRoutes);
 
+app.use("/cart", cartRoutes);
 
 app.use("/products", productRoutes);
 
