@@ -9,6 +9,7 @@ const cartRoutes = require("./routes/cartRoutes");
 const orderRoutes = require("./routes/orderRoutes");
 
 dotenv.config();
+const PORT = process.env.PORT || 5000;
 const app = express();
 
 app.use(
@@ -20,7 +21,6 @@ app.use(
 // 
 app.use(express.json());
 app.use(cookieParser());
-const PORT = process.env.PORT || 5000;
 
 app.use("/auth", authRoutes);
 
