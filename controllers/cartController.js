@@ -84,6 +84,7 @@ const getCart = async (req, res, next) => {
       cart = new Cart({
         userId,
         products: [],
+
         totalPrice: 0,
       });
       await cart.save();
